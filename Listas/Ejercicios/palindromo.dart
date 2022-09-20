@@ -1,8 +1,9 @@
 import 'dart:io';
 
 void main() {
-    String txt = 'oso';
-    validarPalindromo(txt);
+  print("Introduce un texto: ");
+  String txt = stdin.readLineSync().toString();
+  print( validarPalindromo(txt) );
 }
 
 String validarPalindromo(String txt) {
@@ -11,12 +12,12 @@ String validarPalindromo(String txt) {
   String txtInverso = '';
   String msg = '';
   while(j >= 0) {
-    txtInverso += txt[j];
+    txtInverso += txt[j].toLowerCase();
     j--;
   }
 
   while(i < txt.length) {
-    if(txtInverso[i] == txt[i]) {
+    if(txtInverso[i].toLowerCase() == txt[i]) {
       msg = 'Es palindromo';
     } else {
       msg = 'No es palindromo';

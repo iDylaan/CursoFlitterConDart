@@ -1,8 +1,9 @@
 import 'dart:io';
 
 void main() {
-  String? entrada = null;  // ? Operador seguro para aceptar valores nulos
-  entrada = stdin.readLineSync();
+  print('Introduce un dato de entrada: ');
+  String? entrada = stdin.readLineSync().toString(); // ? Operador seguro para aceptar valores nulos
+
   /**
    * Para entrada de datos enteros
    * String entrada = stdin.readLineSync();
@@ -10,13 +11,10 @@ void main() {
    *  / Alternativa
    * int num = int.parse(entrada);
    */
-  String str = 'Hola mundo';
-  if(entrada != null) {
-    print(calcularVocales(entrada));
-  }
+  print( calcularVocales(entrada) );
 }
 
-String? calcularVocales(String texto) {
+String? calcularVocales( String texto ) {
   texto = texto.toLowerCase();
   int i = 0, vocales = 0;
   String msg = '';
