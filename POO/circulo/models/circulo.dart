@@ -1,4 +1,5 @@
 class Circulo {
+  double pi = 3.141592;
   double radio;
   String color;
 
@@ -9,23 +10,9 @@ class Circulo {
   });
 
   // Metodos
-  double calcularArea(double radio) {
-    double pi = 3.14151692;
-    double area;
+  double calcularArea(double radio) => pi * (radio * radio); 
 
-    area = pi * (radio * radio);
-
-    return area;
-  }
-
-  double calcularPerimetro(double radio) {
-    double pi = 3.14151692;
-    double perimetro;
-
-    perimetro = 2 * pi * radio;
-
-    return perimetro;
-  }
+  double calcularPerimetro(double radio) => 2 * pi * radio; 
 
   @override
   String toString() {

@@ -11,7 +11,7 @@ int convertirDecimalABinario( int decimal ) {
 
   do {
     binario += decimal%2 > 0 ? '0' : '1';
-    print('$decimal / 2 = ${(decimal / 2).truncate()} -> $binario');
+    print('$decimal / 2 = ${(decimal / 2)} -> $binario');
     decimal = (decimal / 2).truncate();
   } while( decimal != 0 );
 
