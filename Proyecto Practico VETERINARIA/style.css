@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.header__logo {
+    width: 300px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header__logo h1 > span{
+    color: green;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 3px black;
+}
+
+.header__navegador {
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__nav-quienes-somos {
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.header__nav-link{
+    cursor: pointer;
+}
+
+.header__nav-link:hover{
+    /* color:rgb(52, 52, 52); */
+    color: rgb(255, 62, 62);
+}
+
+#nav-mision:hover, #nav-Vision:hover, #nav-valores:hover {
+    color:blue;
+}
+
+.header__banner img{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.main-container {
+    width: 100%;
+    margin: 400px auto 0px auto;
+    background-color: grey; /* Convertir a blanco */
+}
+
+.categorias__container {
+    border: 1px solid red;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.categorias__estetica {
+    border: 1px solid blue;
+}
+.categorias__productos {
+    border: 1px solid purple;
+    
+}
+.categorias__atencion-medica {
+    border: 1px solid green;
+    
+}
