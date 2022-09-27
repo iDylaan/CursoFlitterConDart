@@ -1,7 +1,7 @@
 import 'dart:math';
 void main(){
   int n = 5;
-  print( calcularPotencia(m) );
+  print( calcularPotencia(n) );
 }
 
 /**
@@ -10,7 +10,7 @@ void main(){
 
 int calcularPotencia(int n) {
   int i = 0;
-  int suma = 0;
+  num suma = 0;
 
   // Ciclo para iterar las potencias
   while(i <= n) { suma += pow(2, i); i++; }
@@ -18,7 +18,7 @@ int calcularPotencia(int n) {
   // Imprimir la suma
   print( imprimirSuma(n) );
 
-  return suma;
+  return suma.toInt();
 }
 
 String imprimirSuma(n) {
