@@ -16,7 +16,6 @@ class Circulo {
 
   @override
   String toString() {
-    // TODO: implement toString
     return 'Para el Circulo $color\n' + 
     'Área: ${calcularArea(radio)}\nPerímetro: ${calcularPerimetro(radio)}';
   }
