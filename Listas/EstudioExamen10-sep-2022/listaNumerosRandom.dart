@@ -14,6 +14,14 @@ void main(List<String> args) {
   List<int> numeros = generarNumerosAleatoriosNoRepetidos(cantidad);
 
   print(numeros);
+
+
+  int s=0;
+  for(int i=0; i<cantidad;i++){
+    s=s+numeros[i];
+  }
+
+  print(s);
 }
 
 List<int> generarNumerosAleatoriosNoRepetidos(int cantidad) {

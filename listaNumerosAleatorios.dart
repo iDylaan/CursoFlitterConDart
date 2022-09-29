@@ -9,10 +9,14 @@ import 'dart:io';
 void main() {
   print("Cantidad: ");
   int cantidad = int.parse(stdin.readLineSync().toString());
-  List<int> numeros2 = List.generate(cantidad, (int index) => index + 1);
-  numeros2.shuffle();
-  print(numeros2);
-  // List<int> numeros = generarNumeros(cantidad);
+  // List<int> numeros2 = List.generate(cantidad, (int index) => index + 1);
+  // numeros2.shuffle();
+  // print(numeros2);
+  List<int> numeros = generarNumeros(cantidad);
+  // Lis
+  imprimirNumerosAscendentemente(numeros);
+  imprimirNumerosDescendentemente(numeros);
+  print(numeros);
 
   // print(numeros);
 
@@ -28,6 +32,17 @@ void main() {
   // print(numeros);
   // numeros.sort((a, b) => b.compareTo(a));
   // print(numeros);
+}
+
+List<int> imprimirNumerosAscendentemente(List<int> numeros) {
+  List<int> aux = numeros;
+  aux.sort((a, b) => a.compareTo(b));
+  return aux;
+}
+List<int> imprimirNumerosDescendentemente(List<int> numeros) {
+  List<int> aux = numeros;
+  aux.sort((a, b) => b.compareTo(a));
+  return aux;
 }
 
 List<int> generarNumeros(int cantidad) {
