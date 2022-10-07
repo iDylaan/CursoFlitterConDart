@@ -108,7 +108,7 @@ class AppEmpleados {
 
             ui.mostrarAlerta('¿Deseas editar otra propiedad? (s/n)');
             nuevaEdicion = ui.pedirString();
-          } while (nuevaEdicion != 's');
+          } while (nuevaEdicion == 's');
           opcion = 5;
         } while( opcion != 5 );
         break;
