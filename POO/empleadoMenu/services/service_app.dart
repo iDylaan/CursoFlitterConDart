@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import '../../../Examenes Ruiz/operacionesCadena.dart';
 import '../models/UI.dart';
 import './service_empleado.dart';
 import '../models/persona.dart';
@@ -121,21 +120,21 @@ class AppEmpleados {
           print('${i + 1}) ${empleadosServices.empleados[i].nombre} - Edad: ${empleadosServices.empleados[i].edad}');
         }
 
-        int noEmpleado = ui.pedirInt();
+        int noEmpleado = ui.pedirInt() - 1;
         // Validar numero de empleado
-        if (noEmpleado < 1 || noEmpleado > empleadosServices.empleados.length) {
+        if (noEmpleado < 0 || noEmpleado > empleadosServices.empleados.length) {
           ui.mostrarError('Ese empleado no existe...');
           exit(0);
         }
 
-        empleadosServices.eliminarEmpleado(empleadosServices.empleados[noEmpleado].nombre);
+        empleadosServices.eliminarEmpleado(empleadosServices.empleados[noEmpleado]);
 
         ui.mostrarAlerta('Se ha elimiado correctamente...');
         break;
 
 
       case 5: 
-        print(empleadosServices.empleados);
+        empleadosServices.empleados.length > 0 ? print(empleadosServices.empleados) : ui.mostrarAtencion('No hay empleados registrados');
         break;
 
       case 6:

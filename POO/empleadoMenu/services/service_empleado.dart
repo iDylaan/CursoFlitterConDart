@@ -27,8 +27,8 @@ class EmpleadoService {
     return encontrados == 0 ? 'No se encontró ningún resultado' : 'Encontrados $encontrados\n$reporte';
   }
 
-  void eliminarEmpleado(String nombre) {
-    empleados.remove(nombre);
+  void eliminarEmpleado(Empleado empleado) {
+    empleados.remove(empleado);
   }
 
 
