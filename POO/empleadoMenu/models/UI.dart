@@ -1,6 +1,4 @@
 import 'dart:io';
-import './persona.dart';
-import '../services/service_empleado.dart';
 
 class UI {
   // Constructor
@@ -13,6 +11,7 @@ class UI {
   void mostrarAlerta( String mensaje ) => print( mensaje );
   void mostrarError( String error ) => print( 'ERROR! $error' );
   void mostrarAtencion( String mensaje ) => print( 'Atención... $mensaje' );
+  String incorporarTexto(String contenido, String referencia) => referencia.replaceRange(1, contenido.length, contenido);
 
   // Metodos de datos de entrada
   int pedirInt() => int.parse(stdin.readLineSync().toString()); 

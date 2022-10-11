@@ -37,4 +37,9 @@ class Empleado extends Persona {
 
   set puesto(String puesto) => this._puesto = puesto;
   set sueldo(double sueldo) => this._sueldo = sueldo;
+
+  @override
+  String toString() {
+    return 'Nombre: ${this.nombre}\nEdad: ${this.edad}\nPuesto: ${this._puesto}\nSalario por hora: ${this._sueldo}\n';
+  }
 }

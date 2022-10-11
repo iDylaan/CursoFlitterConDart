@@ -4,17 +4,17 @@ class EmpleadoService {
   List<Empleado> empleados = [];
 
   EmpleadoService() {
-    Empleado emp1 = Empleado.Todos('Daniel', 21, 'Dev', 50);
-    Empleado emp2 = Empleado.Todos('Eduardo', 30, 'Analist', 30);
-    Empleado emp3 = Empleado();
-    emp3.nombre = 'Mario';
-    emp3.edad = 40;
-    emp3.puesto = 'Manager';
-    emp3.sueldo = 90.5;
+    // Empleado emp1 = Empleado.Todos('Daniel', 21, 'Dev', 50);
+    // Empleado emp2 = Empleado.Todos('Eduardo', 30, 'Analist', 30);
+    // Empleado emp3 = Empleado();
+    // emp3.nombre = 'Mario';
+    // emp3.edad = 40;
+    // emp3.puesto = 'Manager';
+    // emp3.sueldo = 90.5;
 
-    empleados.add(emp1);
-    empleados.add(emp2);
-    empleados.add(emp3);
+    // empleados.add(emp1);
+    // empleados.add(emp2);
+    // empleados.add(emp3);
   }
 
   List<Empleado> obtenerTodos() {
@@ -23,6 +23,18 @@ class EmpleadoService {
 
   void agregar(Empleado emp) {
     empleados.add(emp);
+  }
+
+  int obtenerIndice(String nombre) {
+    int index = 0;
+    for(int i = 0; i < empleados.length; i++) {
+      if(empleados[index].nombre.compareTo(nombre) == 0) {
+        index = i;
+      } else {
+        index = -1;
+      }
+    }
+    return index;
   }
 
 

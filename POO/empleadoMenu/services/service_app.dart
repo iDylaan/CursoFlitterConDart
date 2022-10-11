@@ -20,12 +20,13 @@ class AppEmpleados {
     int opcion;
     do {
       menuPrincipal.opcionesMenu = [
-        'Agregar',        // 1)
-        'Buscar',         // 2)
-        'Editar',         // 3)
-        'Eliminar',       // 4)
-        'Mostrar Todos',  // 5)
-        'Salir'           // 6)
+        'Agregar',          // 1)
+        'Buscar',           // 2)
+        'Editar',           // 3)
+        'Eliminar',         // 4)
+        'Mostrar Todos',    // 5)
+        'Mostrar Reporte',  // 6)
+        'Salir'             // 7)
         ];
       ui.mostrarAlerta('¿Qué deseas hacer?');
       menuPrincipal.mostrarMenu();
@@ -137,7 +138,14 @@ class AppEmpleados {
         empleadosServices.empleados.length > 0 ? print(empleadosServices.empleados) : ui.mostrarAtencion('No hay empleados registrados');
         break;
 
+
       case 6:
+        
+        print(empleadosServices.generarReporteSalarios());
+        break;
+      
+
+      case 7:
         break;
       default:
         ui.mostrarError('Esa opcion no existe...');
