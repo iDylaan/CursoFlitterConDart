@@ -91,8 +91,8 @@ class EmpleadoService {
     reporte += '+---------------------+-------------------+---------------------+-----------------+--------------+-------------+----------------------+\n';
     reporte += '                                                                          ' +
     'TOTALES | ${ui.incorporarTexto('\$${totalP()}', '            ')}| '+
-    '${ui.incorporarTexto('\$${totalD()}', '            ')}| ' +
-    '${ui.incorporarTexto('\$${totalSalarios()}', '                   ')}|\n';
+    '${ui.incorporarTexto('\$${totalD()}', '           ')}| ' +
+    '${ui.incorporarTexto('\$${totalSalarios()}', '                    ')}|\n';
 
     return reporte;
   }
